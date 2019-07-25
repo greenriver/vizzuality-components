@@ -334,7 +334,7 @@ const response = {
   }
 }
 
-export const layers = response.data
+export const layers = response.data.map((layer) => ({id: layer.id, type: layer.type, ...layer.attributes}))
 
 export default {
   layers
